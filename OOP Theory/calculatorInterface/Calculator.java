@@ -1,37 +1,42 @@
 interface Main{
-    void add();
-    void sub();
-    void mul();
-    void div();
+    void add(int a, int b);
+    void sub(int a, int b);
+    void mul(int a, int b);
+    void div(int a, int b);
 }
 
-public class Calculator implements Main{
-    public void add(){
-        System.out.println("Add");
-    }
-    public void sub(){
-        System.out.println("Subtract");
-    }
-    public void mul(){
-        System.out.println("Multiply");
-    }
-    public void div(){
-        System.out.println("Divide");
-    }
-    public void sqr(){
-        System.out.println("Square");
-    }
-    public void sqrt(){
-        System.out.println("Square root");
-    }
+class Calculator implements Main{
+    public void sqr(int a){}
+    public void sqrt(int a){}
+}
 
-
-
+class Example{
     public static void main(String[] args) {
-        Calculator c = new Calculator();
-        c.add();
-        c.sub();
-        c.sqr();
-        c.sqrt();
+        Calculator c = new Calculator() {
+            public void add(int a, int b){
+                System.out.println(a+b);
+            }
+            public void sub(int a, int b){
+                System.out.println(a-b);
+            }
+            public void mul(int a, int b){
+                System.out.println(a*b);
+            }
+            public void div(int a, int b){
+                System.out.println(a/b);
+            }
+            public void sqr(int a){
+                System.out.println(a*a);
+            }
+            public void sqrt(int a){
+                System.out.println(Math.sqrt(a));
+            }
+        };
+        c.add(5,7);
+        c.sub(5,7);
+        c.mul(5,7);
+        c.div(5,7);
+        c.sqr(5);
+        c.sqrt(5);
     }
 }
