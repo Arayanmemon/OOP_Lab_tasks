@@ -1,21 +1,30 @@
-import java.util.Scanner;
-import java.io.IOException;
-public class Task2 extends Exception{
-    public Task2(int x){
-        if (x<18) {
-            System.out.println("Age is less than 18");
-        } else {
-            System.out.println("processing....");
-        }
-    }
-    public static void main(String[] args) {
-        try{
-        Scanner sc = new Scanner(System.in);
-        int age = sc.nextInt();
-        throw new Task2(age);  
-        }
-        catch(Task2 e){
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
 
-        }   
-}
+public class Task2{
+    public static void main(String[] args) {
+        
+        // Writting in File using Buffred writter
+        try {
+            FileWriter fw = new FileWriter("./file.txt");
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write("I am being read from file");
+            bw.close();
+            System.out.println("File written succsesfully..");
+
+        } catch (Exception e) {
+        }
+        
+        // Reading from File using Buffred reader
+        try {
+            FileReader fr = new FileReader("file.txt");
+            BufferedReader br = new BufferedReader(fr);
+            System.out.println(br.readLine());
+
+        } catch (Exception e) {
+        }
+
+    }
 }
