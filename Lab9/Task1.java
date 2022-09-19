@@ -1,4 +1,3 @@
-
 // Interface methods are by default abstract and public
 // Interface attributes are by default public, static and final
 class vehicle {
@@ -39,6 +38,5 @@ class VigoTruck extends Truck{}
 
 public class Task1{
     public static void main(String[] args) {
-        
     }
 }
