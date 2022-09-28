@@ -80,8 +80,6 @@ public class form{
                 String Address = a1.getText();
                 String Country = cb.getSelectedItem().toString();
                 new print(name, roll, batch, section, Gender, Qualification, Address, Country);
-                // JOptionPane.showMessageDialog(f,"Name: "+name+"\nEmail: "+email+"\nPassword: "+password);
-                // f.dispose();
             }
         });
 
@@ -93,7 +91,6 @@ public class form{
                 Qualification += c3.isSelected() ? "Graduate" : "";
                 Qualification += c4.isSelected() ? "Post Graduate" : "";
                 try{
-
                     FileWriter fw = new FileWriter("file.json");
                     JSONObject obj = new JSONObject();
 
@@ -109,23 +106,6 @@ public class form{
                     fw.write(obj.toJSONString());
                     fw.close();
                 }catch(Exception er){System.out.println(er);}
-        }});
-
-        b3.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
-                String name = t1.getText();
-                String roll = t2.getText();
-                String batch = t3.getText();
-                String section = t4.getText();
-                String Gender = group.getSelection().getActionCommand();
-                String Qualification = c1.isSelected() ? "Matric" : "";
-                Qualification += c2.isSelected() ? "Intermediate" : "";
-                Qualification += c3.isSelected() ? "Graduate" : "";
-                Qualification += c4.isSelected() ? "Post Graduate" : "";
-                String Address = a1.getText();
-                String Country = cb.getSelectedItem().toString();
-                new db(name, roll, batch, section, Gender, Qualification, Address, Country);
-                System.out.println("Saved to Database Successfully");
         }});
 
         group.add(male);
