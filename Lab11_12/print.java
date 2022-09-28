@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
@@ -50,6 +52,7 @@ public class print {
         f.add(t7);
         f.add(t8);
         f.setSize(500,600);
+        f.getContentPane().setBackground(Color.ORANGE);
         f.setLayout(null);
         f.setVisible(true); 
 

@@ -155,7 +155,7 @@ public class form{
         f.add(b3);
         f.setSize(600,700);
         f.setLayout(null);
-        f.setBackground(Color.RED);
+        f.getContentPane().setBackground(Color.YELLOW);
         f.setVisible(true);  
     }
 
