@@ -25,7 +25,6 @@ public class form{
         JTextField t4 = new JTextField();
         JButton b1 = new JButton("Print");
         JButton b2 = new JButton("Save");
-        JButton b3 = new JButton("Database");
         JRadioButton male = new JRadioButton("Male");
         JRadioButton female = new JRadioButton("Female");
         JCheckBox c1 = new JCheckBox("Matric");
@@ -59,8 +58,7 @@ public class form{
         a1.setBounds(250,400,200,60);
         cb.setBounds(250,480,100,30);
         b1.setBounds(150,530,100,30);
-        b2.setBounds(250,530,100,30);
-        b3.setBounds(350,530,100,30);
+        b2.setBounds(300,530,100,30);
 
         male.setActionCommand("Male");
         female.setActionCommand("Female");
@@ -132,7 +130,6 @@ public class form{
         f.add(cb);
         f.add(b1);
         f.add(b2);
-        f.add(b3);
         f.setSize(600,700);
         f.setLayout(null);
         f.getContentPane().setBackground(Color.YELLOW);
